@@ -34,11 +34,12 @@ device = 0
 disp = EPD_driver.EPD_driver(spi=SPI.SpiDev(bus, device))
 
 # Initialisation de l'écran
-print '------------init and Clear part screen------------'
+print '------------init and Clear screen------------'
+disp.Dis_Clear_full()
 disp.Dis_Clear_part()
 
 #Show part pic
-print '------------Show part pic------------'
+print '------------Show pic------------'
 disp.Dis_part_pic(0,xDot-1,0,yDot-1,ar)
 
 
